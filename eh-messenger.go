@@ -10,6 +10,11 @@ import (
 )
 
 func main() {
+	threads := 3
+	go sendMessage(threads)
+}
+
+func sendMessage(t) {
 	// Set up environment variables
 	eventHubConnectionString := ""
 
